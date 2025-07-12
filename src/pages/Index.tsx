@@ -10,14 +10,14 @@ import { Globe, Headphones, BookOpen } from 'lucide-react';
 const Index = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('es');
 
-  const currentLanguage = languages.find(lang => lang.code === selectedLanguage);
+  const currentLanguage = languages.find((lang) => lang.code === selectedLanguage);
   const currentCategories = phraseCategories[selectedLanguage] || [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto p-4 max-w-6xl">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+          <h1 className='text-gray-900 text-4xl font-bold mb-4 flex items-center justify-center gap-3'>TravelTranslator
             <Globe className="h-10 w-10 text-blue-600" />
             Travel Phrase Translator
           </h1>
@@ -29,13 +29,13 @@ const Index = () => {
             <LanguageSelector
               languages={languages}
               selectedLanguage={selectedLanguage}
-              onLanguageChange={setSelectedLanguage}
-            />
+              onLanguageChange={setSelectedLanguage} />
+
           </div>
         </div>
 
-        {currentLanguage && (
-          <div className="mb-8">
+        {currentLanguage &&
+        <div className="mb-8">
             <Card className="bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
@@ -55,12 +55,12 @@ const Index = () => {
               </CardHeader>
             </Card>
           </div>
-        )}
+        }
 
         <CategoryTabs categories={currentCategories} languageCode={selectedLanguage} />
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
