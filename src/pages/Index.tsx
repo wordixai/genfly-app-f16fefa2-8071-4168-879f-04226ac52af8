@@ -17,12 +17,12 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto p-4 max-w-6xl">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+          <h1 className='text-gray-900 text-4xl font-bold mb-4 flex items-center justify-center gap-3'>Travel  Translator
             <Globe className="h-10 w-10 text-blue-600" />
             Travel Phrase Translator
           </h1>
-          <p className='text-gray-600 text-lg mb-6'>phrases with audio pronunciation guides
-
+          <p className="text-lg text-gray-600 mb-6">
+            Learn essential travel phrases with audio pronunciation guides
           </p>
           
           <div className="flex justify-center mb-8">
